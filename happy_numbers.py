@@ -36,7 +36,7 @@ def happy(num):
     proc_nums = []
 
     while True:
-        num_array = map(int, str(cur_num))
+        num_array = [int(c) for c in str(cur_num)]
         cur_total = sum([n ** 2 for n in num_array])
         if len(num_array) == 1 and cur_total in proc_nums:
             return cur_total == 1
